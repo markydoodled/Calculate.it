@@ -4,7 +4,7 @@
 A Simple SwiftUI App That Does Basic Calculations. Also Has A Tip Function. 
 
 # Releases
-[Click Here...]()
+[Click Here...](https://github.com/markydoodled/Calculate.it/releases)
 
 # Features
 - iOS App
@@ -17,6 +17,7 @@ A Simple SwiftUI App That Does Basic Calculations. Also Has A Tip Function.
 - Percentage Function
 - watchOS App
 - Scientific Functions
+- More Customisability To The Tip Function
 
 # Images
 [Click Here...]()
