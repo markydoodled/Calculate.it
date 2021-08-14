@@ -15,6 +15,7 @@ A Simple SwiftUI App That Does Basic Calculations. Also Has A Tip Function.
 # Features To Come
 - Decimal Function
 - Percentage Function
+- Negative Function
 - watchOS App
 - Scientific Functions
 - More Customisability To The Tip Function
