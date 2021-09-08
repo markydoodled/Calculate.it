@@ -13,10 +13,7 @@ A Simple SwiftUI App That Does Basic Calculations. Also Has A Tip Function.
 - Standard Integer Calculations
 
 # Features To Come
-- Decimal Function
-- Percentage Function
 - watchOS App
-- Scientific Functions
 - More Customisability To The Tip Function
 
 # Images

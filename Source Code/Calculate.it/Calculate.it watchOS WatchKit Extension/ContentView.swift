@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  Calculate.it
+//  Calculate.it watchOS WatchKit Extension
 //
-//  Created by Mark Howard on 13/08/2021.
+//  Created by Mark Howard on 14/08/2021.
 //
 
 import SwiftUI
@@ -35,9 +35,9 @@ enum CalcButton: String {
         case .add, .subtract, .mutliply, .divide, .equal:
             return .accentColor
         case .clear, .negative, .percent, .tip:
-            return Color(.secondaryLabelColor)
+            return Color(.gray)
         default:
-            return Color(NSColor(red: 55/255.0, green: 55/255.0, blue: 55/255.0, alpha: 1))
+            return Color(UIColor(red: 55/255.0, green: 55/255.0, blue: 55/255.0, alpha: 1))
         }
     }
 }
@@ -45,7 +45,6 @@ enum CalcButton: String {
 enum Operation {
     case add, subtract, multiply, divide, none
 }
-
 
 struct ContentView: View {
     @State var value = "0"
@@ -57,68 +56,193 @@ struct ContentView: View {
     @State var percentagePick = 1
     @State var peoplePick = 1
     @State var peopleNumber = "1 Person"
-    let buttons: [[CalcButton]] = [
-        [.clear],
-        [.seven, .eight, .nine, .mutliply],
-        [.four, .five, .six, .subtract],
-        [.one, .two, .three, .add],
-        [.zero, .tip, .equal, .divide],
-    ]
     var body: some View {
         ZStack {
             Color.black.edgesIgnoringSafeArea(.all)
+            ScrollView {
             VStack {
                 Spacer()
-
                 HStack {
                     Spacer()
                     ScrollView {
                     Text(value)
                         .bold()
-                        .font(.system(size: 80))
+                        .font(.system(size: 40))
                         .foregroundColor(.white)
-                        .contextMenu {
-                            Button(action: {NSPasteboard.general.setString(value, forType: .string)}) {
-                                Label("Copy", systemImage: "doc.on.doc")
-                            }
-                        }
                 }
                 }
                 .padding()
-                ForEach(buttons, id: \.self) { row in
-                    HStack(spacing: 12) {
-                        ForEach(row, id: \.self) { item in
-                            Button(action: {
-                                self.didTap(button: item)
-                            }, label: {
-                                Text(item.rawValue)
-                                    .font(.system(size: 32))
-                                    .frame(
-                                        width: self.buttonWidth(item: item),
-                                        height: self.buttonHeight()
-                                    )
-                                    .background(item.buttonColor)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(self.buttonWidth(item: item)/2)
-                            })
-                            .buttonStyle(BorderlessButtonStyle())
+                VStack {
+                    HStack {
+                        Spacer()
+                        Button(action: {self.didTap(button: .clear)}) {
+                            Text("AC")
+                                .bold()
+                                .foregroundColor(.white)
                         }
+                        Spacer()
                     }
-                    .padding(.bottom, 3)
+                        row1
+                        row2
+                        row3
+                        row4
                 }
-                .padding(.bottom)
             }
+        }
         }
         .sheet(isPresented: $showingTip) {
             tip
         }
     }
+    var row1: some View {
+        HStack {
+           Spacer()
+            Button(action: {self.didTap(button: .seven)}) {
+                Text("7")
+                    .bold()
+                    .foregroundColor(.white)
+            }
+            Button(action: {self.didTap(button: .eight)}) {
+                Text("8")
+                    .bold()
+                    .foregroundColor(.white)
+            }
+            Button(action: {self.didTap(button: .nine)}) {
+                Text("9")
+                    .bold()
+                    .foregroundColor(.white)
+            }
+            Button(action: {self.didTap(button: .mutliply)}) {
+                Text("x")
+                    .bold()
+                    .foregroundColor(.accentColor)
+            }
+            Spacer()
+        }
+    }
+    var row2: some View {
+        HStack {
+            Spacer()
+            Button(action: {self.didTap(button: .four)}) {
+                 Text("4")
+                     .bold()
+                     .foregroundColor(.white)
+             }
+            Button(action: {self.didTap(button: .five)}) {
+                 Text("5")
+                     .bold()
+                     .foregroundColor(.white)
+             }
+            Button(action: {self.didTap(button: .six)}) {
+                 Text("6")
+                     .bold()
+                     .foregroundColor(.white)
+             }
+            Button(action: {self.didTap(button: .subtract)}) {
+                 Text("-")
+                     .bold()
+                     .foregroundColor(.accentColor)
+             }
+             Spacer()
+        }
+    }
+    var row3: some View {
+        HStack {
+            Spacer()
+            Button(action: {self.didTap(button: .one)}) {
+                 Text("1")
+                     .bold()
+                     .foregroundColor(.white)
+             }
+            Button(action: {self.didTap(button: .two)}) {
+                 Text("2")
+                     .bold()
+                     .foregroundColor(.white)
+             }
+            Button(action: {self.didTap(button: .three)}) {
+                 Text("3")
+                     .bold()
+                     .foregroundColor(.white)
+             }
+            Button(action: {self.didTap(button: .add)}) {
+                 Text("+")
+                     .bold()
+                     .foregroundColor(.accentColor)
+             }
+             Spacer()
+        }
+    }
+    var row4: some View {
+        HStack {
+            Spacer()
+            Button(action: {self.didTap(button: .zero)}) {
+                 Text("0")
+                     .bold()
+                     .foregroundColor(.white)
+             }
+            Button(action: {self.didTap(button: .tip)}) {
+                 Text("$")
+                     .bold()
+                     .foregroundColor(.white)
+             }
+            Button(action: {self.didTap(button: .equal)}) {
+                 Text("=")
+                     .bold()
+                     .foregroundColor(.accentColor)
+             }
+            Button(action: {self.didTap(button: .divide)}) {
+                 Text("÷")
+                     .bold()
+                     .foregroundColor(.accentColor)
+             }
+             Spacer()
+        }
+    }
+    var percentage: some View {
+        Picker("Percentage:", selection: $percentagePick) {
+                Text("5%")
+            .tag(1)
+                Text("10%")
+            .tag(2)
+                Text("15%")
+            .tag(3)
+            Text("20%")
+        .tag(4)
+            Text("25%")
+        .tag(5)
+            Text("30%")
+        .tag(6)
+            Text("35%")
+        .tag(7)
+            Text("40%")
+        .tag(8)
+            Text("45%")
+        .tag(9)
+            Text("50%")
+        .tag(10)
+        }
+        .navigationTitle("Percentage")
+    }
+    var person: some View {
+        Picker("People:", selection: $peoplePick) {
+            Text("1")
+                .tag(1)
+            Text("2")
+                .tag(2)
+            Text("3")
+                .tag(3)
+            Text("4")
+                .tag(4)
+            Text("5")
+                .tag(5)
+        }
+            .navigationTitle("People")
+    }
     var tip: some View {
-            GroupBox(label: Label("Tip", systemImage: "dollarsign.circle")) {
+        NavigationView {
+            ScrollView {
                 VStack {
                     HStack {
-                        Text("Total: ")
-                        Spacer()
                         TextField("Enter Total...", text: $tipText)
                             .onReceive(Just(tipText)) { newValue in
                                             let filtered = newValue.filter { "0123456789.".contains($0) }
@@ -127,97 +251,17 @@ struct ContentView: View {
                                             }
                                     }
                     }
-                    HStack {
-                        Picker("Percentage:", selection: $percentagePick) {
-                            Button(action: {}) {
-                                Text("5%")
-                            }
-                            .tag(1)
-                            Button(action: {}) {
-                                Text("10%")
-                            }
-                            .tag(2)
-                            Button(action: {}) {
-                                Text("15%")
-                            }
-                            .tag(3)
-                            Button(action: {}) {
-                                Text("20%")
-                            }
-                            .tag(4)
-                            Button(action: {}) {
-                                Text("25%")
-                            }
-                            .tag(5)
-                            Button(action: {}) {
-                                Text("30%")
-                            }
-                            .tag(6)
-                            Button(action: {}) {
-                                Text("35%")
-                            }
-                            .tag(7)
-                            Button(action: {}) {
-                                Text("40%")
-                            }
-                            .tag(8)
-                            Button(action: {}) {
-                                Text("45%")
-                            }
-                            .tag(9)
-                            Button(action: {}) {
-                                Text("50%")
-                            }
-                            .tag(10)
-                        }
-                        .pickerStyle(MenuPickerStyle())
+                    NavigationLink(destination: percentage) {
+                        Text("Percentage")
                     }
-                    HStack {
-                        Picker("People:", selection: $peoplePick) {
-                            Button(action: {}) {
-                                Text("1 Person")
-                            }
-                            .tag(1)
-                            Button(action: {}) {
-                                Text("2 People")
-                            }
-                            .tag(2)
-                            Button(action: {}) {
-                                Text("3 People")
-                            }
-                            .tag(3)
-                            Button(action: {}) {
-                                Text("4 People")
-                            }
-                            .tag(4)
-                            Button(action: {}) {
-                                Text("5 People")
-                            }
-                            .tag(5)
-                        }
-                        .pickerStyle(MenuPickerStyle())
-                        .onChange(of: peoplePick) { new in
-                            if peoplePick == 1 {
-                                peopleNumber = "1 Person"
-                            } else if peoplePick == 2 {
-                                peopleNumber = "2 People"
-                            } else if peoplePick == 3 {
-                                peopleNumber = "3 People"
-                            } else if peoplePick == 4 {
-                                peopleNumber = "4 People"
-                            } else if peoplePick == 5 {
-                                peopleNumber = "5 People"
-                            } else {
-                                print("Error")
-                            }
-                        }
+                    NavigationLink(destination: person) {
+                        Text("People")
                     }
                     HStack {
                         Spacer()
-                        Text("Tip To Pay: \(tipToPay) For \(peopleNumber)")
+                        Text("\(tipToPay) For \(peopleNumber)")
                         Spacer()
                     }
-                    HStack {
                     Button(action: {if percentagePick == 1 {
                         var _1div = 0.00
                         _1div = Double(tipText) ?? 0
@@ -439,46 +483,41 @@ struct ContentView: View {
                         }
                         tipToPay = String(format: "%.2f", _10div)
                     } else {
-                        print("Error Percentage Pick")
+                        print("Error Percentage Selection")
                     }
                     }) {
-                        Text("Calculate Tip...")
+                        Text("Calculate")
                             .bold()
-                            .font(.title2)
-                            .foregroundColor(.white)
+                            .foregroundColor(.accentColor)
                             .padding()
-                            .background(RoundedRectangle(cornerSize: CGSize(width: 50, height: 50)).foregroundColor(.accentColor))
-                    }
-                    .buttonStyle(BorderlessButtonStyle())
-                        Spacer()
-                    Button(action: {self.showingTip = false}) {
-                        Text("Done")
-                            .bold()
-                            .font(.title2)
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(RoundedRectangle(cornerSize: CGSize(width: 50, height: 50)).foregroundColor(.accentColor))
-                    }
-                    .buttonStyle(BorderlessButtonStyle())
                     }
                 }
-            }
             .padding()
-            .onAppear() {
-                if peoplePick == 1 {
-                    peopleNumber = "1 Person"
-                } else if peoplePick == 2 {
-                    peopleNumber = "2 People"
-                } else if peoplePick == 3 {
-                    peopleNumber = "3 People"
-                } else if peoplePick == 4 {
-                    peopleNumber = "4 People"
-                } else if peoplePick == 5 {
-                    peopleNumber = "5 People"
-                } else {
-                    print("Error")
+                .navigationTitle("Tip")
+                .toolbar {
+                    ToolbarItem(placement: .confirmationAction) {
+                        Button(action: {self.showingTip = false}) {
+                            Text("Done")
+                        }
+                    }
                 }
+        }
+    }
+        .onAppear() {
+            if peoplePick == 1 {
+                peopleNumber = "1 Person"
+            } else if peoplePick == 2 {
+                peopleNumber = "2 People"
+            } else if peoplePick == 3 {
+                peopleNumber = "3 People"
+            } else if peoplePick == 4 {
+                peopleNumber = "4 People"
+            } else if peoplePick == 5 {
+                peopleNumber = "5 People"
+            } else {
+                print("Error")
             }
+        }
     }
     func didTap(button: CalcButton) {
         switch button {
@@ -543,29 +582,6 @@ struct ContentView: View {
                 self.value = "\(self.value)\(number)"
             }
         }
-    }
-
-    func buttonWidth(item: CalcButton) -> CGFloat {
-        if item == .clear {
-            return ((CGFloat(325) - (3*12)) / 5) * 5
-        }
-        if item == .divide {
-            return ((CGFloat(325) - (5*12)) / 5) * 2
-        }
-        if item == .add {
-            return ((CGFloat(325) - (5*12)) / 5) * 2
-        }
-        if item == .subtract {
-            return ((CGFloat(325) - (5*12)) / 5) * 2
-        }
-        if item == .mutliply {
-            return ((CGFloat(325) - (5*12)) / 5) * 2
-        }
-        return (CGFloat(65) - (5*12) / 5)
-    }
-
-    func buttonHeight() -> CGFloat {
-        return (CGFloat(65) - (5*12) / 5)
     }
 }
 

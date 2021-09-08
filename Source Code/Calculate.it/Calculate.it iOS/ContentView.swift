@@ -55,6 +55,9 @@ struct ContentView: View {
     @State var tipText = ""
     @State var tipToPay = "0.00"
     @State var percentagePick = 1
+    @State var peoplePick = 1
+    @State var peopleNumber = "1 Person"
+    @State var percentageNumber = "5%"
 
     let buttons: [[CalcButton]] = [
         [.clear],
@@ -130,7 +133,7 @@ struct ContentView: View {
                                     }
                     }
                     HStack {
-                        Picker("Percentage:", selection: $percentagePick) {
+                        Picker("Percentage: \(percentageNumber)", selection: $percentagePick) {
                             Button(action: {}) {
                                 Text("5%")
                             }
@@ -143,8 +146,101 @@ struct ContentView: View {
                                 Text("15%")
                             }
                             .tag(3)
+                            Button(action: {}) {
+                                Text("20%")
+                            }
+                            .tag(4)
+                            Button(action: {}) {
+                                Text("25%")
+                            }
+                            .tag(5)
+                            Button(action: {}) {
+                                Text("30%")
+                            }
+                            .tag(6)
+                            Button(action: {}) {
+                                Text("35%")
+                            }
+                            .tag(7)
+                            Button(action: {}) {
+                                Text("40%")
+                            }
+                            .tag(8)
+                            Button(action: {}) {
+                                Text("45%")
+                            }
+                            .tag(9)
+                            Button(action: {}) {
+                                Text("50%")
+                            }
+                            .tag(10)
                         }
-                        .pickerStyle(SegmentedPickerStyle())
+                        .pickerStyle(MenuPickerStyle())
+                        .onChange(of: percentagePick) { new in
+                            if percentagePick == 1 {
+                                percentageNumber = "5%"
+                            } else if percentagePick == 2 {
+                                percentageNumber = "10%"
+                            } else if percentagePick == 3 {
+                                percentageNumber = "15%"
+                            } else if percentagePick == 4 {
+                                percentageNumber = "20%"
+                            } else if percentagePick == 5 {
+                                percentageNumber = "25%"
+                            } else if percentagePick == 6 {
+                                percentageNumber = "30%"
+                            } else if percentagePick == 7 {
+                                percentageNumber = "35%"
+                            } else if percentagePick == 8 {
+                                percentageNumber = "40%"
+                            } else if percentagePick == 9 {
+                                percentageNumber = "45%"
+                            } else if percentagePick == 10 {
+                                percentageNumber = "50%"
+                            } else {
+                                print("Error")
+                            }
+                        }
+                    }
+                    HStack {
+                        Picker("People: \(peopleNumber)", selection: $peoplePick) {
+                            Button(action: {}) {
+                                Text("1 Person")
+                            }
+                            .tag(1)
+                            Button(action: {}) {
+                                Text("2 People")
+                            }
+                            .tag(2)
+                            Button(action: {}) {
+                                Text("3 People")
+                            }
+                            .tag(3)
+                            Button(action: {}) {
+                                Text("4 People")
+                            }
+                            .tag(4)
+                            Button(action: {}) {
+                                Text("5 People")
+                            }
+                            .tag(5)
+                        }
+                        .pickerStyle(MenuPickerStyle())
+                        .onChange(of: peoplePick) { new in
+                            if peoplePick == 1 {
+                                peopleNumber = "1 Person"
+                            } else if peoplePick == 2 {
+                                peopleNumber = "2 People"
+                            } else if peoplePick == 3 {
+                                peopleNumber = "3 People"
+                            } else if peoplePick == 4 {
+                                peopleNumber = "4 People"
+                            } else if peoplePick == 5 {
+                                peopleNumber = "5 People"
+                            } else {
+                                print("Error")
+                            }
+                        }
                     }
                     HStack {
                         Spacer()

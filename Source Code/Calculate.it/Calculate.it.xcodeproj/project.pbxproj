@@ -16,7 +16,33 @@
 		D56EF62426BD4EFA00F17597 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56EF62326BD4EFA00F17597 /* ContentView.swift */; };
 		D56EF62626BD4F0000F17597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D56EF62526BD4F0000F17597 /* Assets.xcassets */; };
 		D56EF62926BD4F0000F17597 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D56EF62826BD4F0000F17597 /* Preview Assets.xcassets */; };
+		D58171E326C7C26A0034D085 /* Calculate.it watchOS WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D58171E226C7C26A0034D085 /* Calculate.it watchOS WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D58171E826C7C26F0034D085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D58171E726C7C26F0034D085 /* Assets.xcassets */; };
+		D58171EF26C7C26F0034D085 /* Calculate.it watchOS WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D58171EE26C7C26F0034D085 /* Calculate.it watchOS WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D58171F426C7C26F0034D085 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58171F326C7C26F0034D085 /* ContentView.swift */; };
+		D58171F626C7C26F0034D085 /* Calculate_itApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58171F526C7C26F0034D085 /* Calculate_itApp.swift */; };
+		D58171F826C7C26F0034D085 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58171F726C7C26F0034D085 /* ComplicationController.swift */; };
+		D58171FA26C7C2700034D085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D58171F926C7C2700034D085 /* Assets.xcassets */; };
+		D58171FD26C7C2700034D085 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D58171FC26C7C2700034D085 /* Preview Assets.xcassets */; };
+		D581720B26C7F8940034D085 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D581720A26C7F8940034D085 /* Settings.bundle */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D58171E426C7C26A0034D085 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D56EF5FE26BBF5C200F17597 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D58171E126C7C26A0034D085;
+			remoteInfo = "Calculate.it watchOS WatchKit App";
+		};
+		D58171F026C7C26F0034D085 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D56EF5FE26BBF5C200F17597 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D58171ED26C7C26F0034D085;
+			remoteInfo = "Calculate.it watchOS WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		D540ADFE26C304150096D03A /* Embed PlugIns */ = {
@@ -27,6 +53,28 @@
 			files = (
 			);
 			name = "Embed PlugIns";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D581720126C7C2700034D085 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D58171E326C7C26A0034D085 /* Calculate.it watchOS WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D581720426C7C2700034D085 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D58171EF26C7C26F0034D085 /* Calculate.it watchOS WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -46,6 +94,18 @@
 		D56EF62526BD4F0000F17597 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D56EF62826BD4F0000F17597 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D56EF62A26BD4F0000F17597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D58171DF26C7C26A0034D085 /* Calculate.it.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculate.it.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D58171E226C7C26A0034D085 /* Calculate.it watchOS WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calculate.it watchOS WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D58171E726C7C26F0034D085 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D58171E926C7C26F0034D085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D58171EE26C7C26F0034D085 /* Calculate.it watchOS WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Calculate.it watchOS WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D58171F326C7C26F0034D085 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D58171F526C7C26F0034D085 /* Calculate_itApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculate_itApp.swift; sourceTree = "<group>"; };
+		D58171F726C7C26F0034D085 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		D58171F926C7C2700034D085 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D58171FC26C7C2700034D085 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D58171FE26C7C2700034D085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D581720A26C7F8940034D085 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +117,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D56EF61C26BD4EFA00F17597 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D58171EB26C7C26F0034D085 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -93,6 +160,8 @@
 			children = (
 				D56EF62026BD4EFA00F17597 /* Calculate.it iOS */,
 				D50BCA6726C6B21C00C87776 /* Calculate.it */,
+				D58171E626C7C26A0034D085 /* Calculate.it watchOS WatchKit App */,
+				D58171F226C7C26F0034D085 /* Calculate.it watchOS WatchKit Extension */,
 				D56EF60726BBF5C200F17597 /* Products */,
 				D56EF63C26BEB81B00F17597 /* Frameworks */,
 			);
@@ -103,6 +172,9 @@
 			children = (
 				D56EF61F26BD4EFA00F17597 /* Calculate.it iOS.app */,
 				D50BCA6626C6B21C00C87776 /* Calculate.it.app */,
+				D58171DF26C7C26A0034D085 /* Calculate.it.app */,
+				D58171E226C7C26A0034D085 /* Calculate.it watchOS WatchKit App.app */,
+				D58171EE26C7C26F0034D085 /* Calculate.it watchOS WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,6 +187,7 @@
 				D56EF62526BD4F0000F17597 /* Assets.xcassets */,
 				D56EF62A26BD4F0000F17597 /* Info.plist */,
 				D56EF62726BD4F0000F17597 /* Preview Content */,
+				D581720A26C7F8940034D085 /* Settings.bundle */,
 			);
 			path = "Calculate.it iOS";
 			sourceTree = "<group>";
@@ -132,6 +205,36 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D58171E626C7C26A0034D085 /* Calculate.it watchOS WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				D58171E726C7C26F0034D085 /* Assets.xcassets */,
+				D58171E926C7C26F0034D085 /* Info.plist */,
+			);
+			path = "Calculate.it watchOS WatchKit App";
+			sourceTree = "<group>";
+		};
+		D58171F226C7C26F0034D085 /* Calculate.it watchOS WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D58171F326C7C26F0034D085 /* ContentView.swift */,
+				D58171F526C7C26F0034D085 /* Calculate_itApp.swift */,
+				D58171F726C7C26F0034D085 /* ComplicationController.swift */,
+				D58171F926C7C2700034D085 /* Assets.xcassets */,
+				D58171FE26C7C2700034D085 /* Info.plist */,
+				D58171FB26C7C2700034D085 /* Preview Content */,
+			);
+			path = "Calculate.it watchOS WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		D58171FB26C7C2700034D085 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D58171FC26C7C2700034D085 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +277,57 @@
 			productReference = D56EF61F26BD4EFA00F17597 /* Calculate.it iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D58171DE26C7C26A0034D085 /* Calculate.it watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D581720926C7C2700034D085 /* Build configuration list for PBXNativeTarget "Calculate.it watchOS" */;
+			buildPhases = (
+				D58171DD26C7C26A0034D085 /* Resources */,
+				D581720126C7C2700034D085 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D58171E526C7C26A0034D085 /* PBXTargetDependency */,
+			);
+			name = "Calculate.it watchOS";
+			productName = "Calculate.it watchOS";
+			productReference = D58171DF26C7C26A0034D085 /* Calculate.it.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		D58171E126C7C26A0034D085 /* Calculate.it watchOS WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D581720826C7C2700034D085 /* Build configuration list for PBXNativeTarget "Calculate.it watchOS WatchKit App" */;
+			buildPhases = (
+				D58171E026C7C26A0034D085 /* Resources */,
+				D581720426C7C2700034D085 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D58171F126C7C26F0034D085 /* PBXTargetDependency */,
+			);
+			name = "Calculate.it watchOS WatchKit App";
+			productName = "Calculate.it watchOS WatchKit App";
+			productReference = D58171E226C7C26A0034D085 /* Calculate.it watchOS WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D58171ED26C7C26F0034D085 /* Calculate.it watchOS WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D581720726C7C2700034D085 /* Build configuration list for PBXNativeTarget "Calculate.it watchOS WatchKit Extension" */;
+			buildPhases = (
+				D58171EA26C7C26F0034D085 /* Sources */,
+				D58171EB26C7C26F0034D085 /* Frameworks */,
+				D58171EC26C7C26F0034D085 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Calculate.it watchOS WatchKit Extension";
+			productName = "Calculate.it watchOS WatchKit Extension";
+			productReference = D58171EE26C7C26F0034D085 /* Calculate.it watchOS WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -187,6 +341,15 @@
 						CreatedOnToolsVersion = 12.5;
 					};
 					D56EF61E26BD4EFA00F17597 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					D58171DE26C7C26A0034D085 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					D58171E126C7C26A0034D085 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					D58171ED26C7C26F0034D085 = {
 						CreatedOnToolsVersion = 12.5;
 					};
 				};
@@ -208,6 +371,9 @@
 			targets = (
 				D56EF61E26BD4EFA00F17597 /* Calculate.it iOS */,
 				D50BCA6526C6B21C00C87776 /* Calculate.it */,
+				D58171DE26C7C26A0034D085 /* Calculate.it watchOS */,
+				D58171E126C7C26A0034D085 /* Calculate.it watchOS WatchKit App */,
+				D58171ED26C7C26F0034D085 /* Calculate.it watchOS WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -227,7 +393,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				D56EF62926BD4F0000F17597 /* Preview Assets.xcassets in Resources */,
+				D581720B26C7F8940034D085 /* Settings.bundle in Resources */,
 				D56EF62626BD4F0000F17597 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D58171DD26C7C26A0034D085 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D58171E026C7C26A0034D085 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D58171E826C7C26F0034D085 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D58171EC26C7C26F0034D085 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D58171FD26C7C2700034D085 /* Preview Assets.xcassets in Resources */,
+				D58171FA26C7C2700034D085 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +444,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D58171EA26C7C26F0034D085 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D58171F426C7C26F0034D085 /* ContentView.swift in Sources */,
+				D58171F626C7C26F0034D085 /* Calculate_itApp.swift in Sources */,
+				D58171F826C7C26F0034D085 /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D58171E526C7C26A0034D085 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D58171E126C7C26A0034D085 /* Calculate.it watchOS WatchKit App */;
+			targetProxy = D58171E426C7C26A0034D085 /* PBXContainerItemProxy */;
+		};
+		D58171F126C7C26F0034D085 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D58171ED26C7C26F0034D085 /* Calculate.it watchOS WatchKit Extension */;
+			targetProxy = D58171F026C7C26F0034D085 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D50BCA7426C6B22000C87776 /* Debug */ = {
@@ -264,6 +478,7 @@
 				CODE_SIGN_ENTITLEMENTS = Calculate.it/Calculate_it.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Calculate.it/Preview Content\"";
 				DEVELOPMENT_TEAM = ZWASU9HFBU;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -274,6 +489,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MSJ.Calculate-it";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -288,6 +504,7 @@
 				CODE_SIGN_ENTITLEMENTS = Calculate.it/Calculate_it.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Calculate.it/Preview Content\"";
 				DEVELOPMENT_TEAM = ZWASU9HFBU;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -298,6 +515,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MSJ.Calculate-it";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -426,6 +644,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Calculate.it iOS/Calculate.it iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Calculate.it iOS/Preview Content\"";
 				DEVELOPMENT_TEAM = ZWASU9HFBU;
 				ENABLE_PREVIEWS = YES;
@@ -435,6 +654,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MSJ.Calculate-it-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -451,6 +671,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Calculate.it iOS/Calculate.it iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Calculate.it iOS/Preview Content\"";
 				DEVELOPMENT_TEAM = ZWASU9HFBU;
 				ENABLE_PREVIEWS = YES;
@@ -460,6 +681,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MSJ.Calculate-it-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -467,6 +689,133 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D58171FF26C7C2700034D085 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = ZWASU9HFBU;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MSJ.Calculate-it-watchOS";
+				PRODUCT_NAME = Calculate.it;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D581720026C7C2700034D085 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = ZWASU9HFBU;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MSJ.Calculate-it-watchOS";
+				PRODUCT_NAME = Calculate.it;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D581720226C7C2700034D085 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = ZWASU9HFBU;
+				IBSC_MODULE = Calculate_it_watchOS_WatchKit_Extension;
+				INFOPLIST_FILE = "Calculate.it watchOS WatchKit App/Info.plist";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MSJ.Calculate-it-watchOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		D581720326C7C2700034D085 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = ZWASU9HFBU;
+				IBSC_MODULE = Calculate_it_watchOS_WatchKit_Extension;
+				INFOPLIST_FILE = "Calculate.it watchOS WatchKit App/Info.plist";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MSJ.Calculate-it-watchOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		D581720526C7C2700034D085 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"Calculate.it watchOS WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = ZWASU9HFBU;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Calculate.it watchOS WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MSJ.Calculate-it-watchOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		D581720626C7C2700034D085 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"Calculate.it watchOS WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = ZWASU9HFBU;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Calculate.it watchOS WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MSJ.Calculate-it-watchOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
 			};
 			name = Release;
 		};
@@ -496,6 +845,33 @@
 			buildConfigurations = (
 				D56EF62C26BD4F0000F17597 /* Debug */,
 				D56EF62D26BD4F0000F17597 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D581720726C7C2700034D085 /* Build configuration list for PBXNativeTarget "Calculate.it watchOS WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D581720526C7C2700034D085 /* Debug */,
+				D581720626C7C2700034D085 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D581720826C7C2700034D085 /* Build configuration list for PBXNativeTarget "Calculate.it watchOS WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D581720226C7C2700034D085 /* Debug */,
+				D581720326C7C2700034D085 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D581720926C7C2700034D085 /* Build configuration list for PBXNativeTarget "Calculate.it watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D58171FF26C7C2700034D085 /* Debug */,
+				D581720026C7C2700034D085 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
