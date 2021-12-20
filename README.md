@@ -3,10 +3,10 @@
 
 A Simple SwiftUI App That Does Basic Calculations. Also Has A Tip Function. For iOS, watchOS And macOS.
 
-# Releases
+# **Releases**
 [Click Here...](https://github.com/markydoodled/Calculate.it/releases)
 
-# Features
+# **Features**
 - iOS App
 - macOS App
 - Tip Function
@@ -14,10 +14,10 @@ A Simple SwiftUI App That Does Basic Calculations. Also Has A Tip Function. For 
 - watchOS App
 - More Customisability To The Tip Function
 
-# Features To Be Implemented
+# **Features To Be Implemented**
 Any Suggestions...
 
-# Images
+# **Images**
 [Click Here...](https://github.com/markydoodled/Calculate.it/tree/main/Images)
 
 ## **Things To Note**
