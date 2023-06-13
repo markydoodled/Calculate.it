@@ -10,9 +10,9 @@ THIS IS AN EXAMPLE APP THAT SHOWS EXAMPLE CODE THAT IS USED TO HELP PEOPLE UNDER
 ## **Features**
 - iOS App
 - macOS App
+- watchOS App
 - Tip Function
 - Standard Integer Calculations
-- watchOS App
 - More Customisability To The Tip Function
 
 ## **Things To Note**
