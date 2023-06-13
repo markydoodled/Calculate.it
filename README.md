@@ -3,6 +3,8 @@
 
 A Simple SwiftUI App That Does Basic Calculations. Also Has A Tip Function. For iOS, watchOS And macOS.
 
+THIS IS AN EXAMPLE APP THAT SHOWS EXAMPLE CODE THAT IS USED TO HELP PEOPLE UNDERSTAND HOW iOS AND SwiftUI WORKS, PLEASE EXPECT BUGS!
+
 # **Releases**
 [Click Here...](https://github.com/markydoodled/Calculate.it/releases)
 
