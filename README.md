@@ -13,7 +13,8 @@ THIS IS AN EXAMPLE APP THAT SHOWS EXAMPLE CODE THAT IS USED TO HELP PEOPLE UNDER
 - watchOS App
 - Tip Function
 - Standard Integer Calculations
-- More Customisability To The Tip Function
+- Feedback Button
+- Complication Support
 
 ## **Things To Note**
 
